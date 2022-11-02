@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Royale</string>
+    <string name="btn">Поменять цвет</string>
+    <string name="message">Хотите поменять фон?</string>
+    <string name="red">Красный</string>
+    <string name="yellow">Желтый</string>
+    <string name="green">Зелёный</string>
+</resources>
