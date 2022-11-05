@@ -33,29 +33,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    @Override
+
     public void onClick(View view) {
         bgButton.setOnClickListener(this);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        final CharSequence[] items = {getText(R.string.red), getText(R.string.yellow), getText(R.string.green)};
+        CharSequence[] items = {getText(R.string.red), getText(R.string.green), getText(R.string.yellow)};
         builder.setTitle(R.string.message);
-        final AlertDialog alertDialog = builder.create();
-        alertDialog.show();
         builder.setItems(items, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 switch (which) {
                     case 0:
-                        constraintLayout.setBackgroundColor(R.color.ColorRed);
-                        Toast.makeText(context, R.string.red, Toast.LENGTH_LONG).show();
+                        Toast.makeText(context, R.string.wred, Toast.LENGTH_LONG).show();
+                        constraintLayout.setBackgroundResource(R.color.ColorRed);
+                        break;
                     case 1:
-                        constraintLayout.setBackgroundColor(R.color.ColorGreen);
-                        Toast.makeText(context, R.string.green, Toast.LENGTH_LONG).show();
+                        Toast.makeText(context, R.string.wgreen, Toast.LENGTH_LONG).show();
+                        constraintLayout.setBackgroundResource(R.color.ColorGreen);
+                        break;
                     case 2:
-                        constraintLayout.setBackgroundColor(R.color.ColorYellow);
-                        Toast.makeText(context, R.string.yellow, Toast.LENGTH_LONG).show();
+                        Toast.makeText(context, R.string.wyellow, Toast.LENGTH_LONG).show();
+                        constraintLayout.setBackgroundResource(R.color.ColorYellow);
+                        break;
                 }
             }
         });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
     }
 }
